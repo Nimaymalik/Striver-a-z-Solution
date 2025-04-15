@@ -27,7 +27,7 @@ public class findUnique {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 5,5,  2, 3, 2 };
+        int[] arr = { 5, 5, 2, 3, 2 };
         unique(arr);
     }
 

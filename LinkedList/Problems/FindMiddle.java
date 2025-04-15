@@ -1,4 +1,4 @@
-package LinkedList.Problems;
+package Problems;
 
 class Node {
     int data;

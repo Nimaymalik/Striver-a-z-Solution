@@ -1,4 +1,4 @@
-package LinkedList.Problems;
+package Problems;
 
 class Node {
     int data;
@@ -34,6 +34,26 @@ public class DetectingLoop {
         return false;
     }
 
+    public static Node wheredetectloop(Node head) {
+        Node fast = head;
+        Node slow = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                slow=head;
+
+                while (slow != fast) {
+                    slow = slow.next;
+                    fast = fast.next.next;
+                }
+            }
+
+        }
+        return slow;
+    }
+
     public static void main(String[] args) {
         Node head = new Node(1);
         Node second = new Node(2);
@@ -54,7 +74,8 @@ public class DetectingLoop {
         eight.next = ninth;
         ninth.next = third;
 
-        System.out.println(detectloop(head));
+        // System.out.println(detectloop(head));
+        System.out.println(wheredetectloop(head));
 
     }
 
