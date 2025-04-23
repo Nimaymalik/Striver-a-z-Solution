@@ -1,3 +1,5 @@
+package Magnifest.Strings;
+
 public class RemoveParentheses {
     public static String removeOuterParentheses(String s) {
         StringBuilder build = new StringBuilder();
